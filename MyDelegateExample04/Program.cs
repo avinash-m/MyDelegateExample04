@@ -30,11 +30,11 @@ namespace MyDelegateExample04
             md += Sub;
            
             Console.WriteLine(md(10, x)); // x = 10 + 30; x = 10 - 30
-            Console.WriteLine(x);
+            Console.WriteLine("x: "+ x);
 
             md -= Add;
             Console.WriteLine(md(40, x)); //x = 40 -(-20)
-            Console.WriteLine(x);
+            Console.WriteLine("x: " + x);
         }
     }
 }
