@@ -25,16 +25,24 @@ namespace MyDelegateExample04
 
         static void Main(string[] args)
         {
+            // without delegate
+            x = 30;
+            Add(10, x);
+            Sub(10, x);
+            Console.WriteLine("Without delegate x: "+ x);
 
+            // with delegate
+            x = 30;
             MyDelegate md = Add;
             md += Sub;
            
             Console.WriteLine(md(10, x)); // x = 10 + 30; x = 10 - 30
-            Console.WriteLine("x: "+ x);
+            Console.WriteLine("With delegate x: "+ x);
 
             md -= Add;
             Console.WriteLine(md(40, x)); //x = 40 -(-20)
             Console.WriteLine("x: " + x);
+
         }
     }
 }
